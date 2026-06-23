@@ -1,0 +1,55 @@
+print("...... STUDENT RESULT MANAGEMENT SYSTEM .......")
+
+name = input("Enter Student Name: ")
+roll = input("Enter Roll Number: ")
+
+
+a1 = int(input("Enter Marks of Subject hindi: "))
+a2 = int(input("Enter Marks of Subject english: "))
+a3 = int(input("Enter Marks of Subject math: "))
+a4 = int(input("Enter Marks of Subject art: "))
+a5 = int(input("Enter Marks of Subject science: "))
+
+total = a1 + a2 + a3 + a4 + a5
+percentage = total / 5
+
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 80:
+    grade = "A"
+elif percentage >= 70:
+    grade = "B"
+elif percentage >= 60:
+    grade = "C"
+elif percentage >= 50:
+    grade = "D"
+else:
+    grade = "F"
+
+
+if percentage >= 60:
+    division = "First"
+elif percentage >= 45:
+    division = "Second"
+elif percentage >= 33:
+    division = "Third"
+else:
+    division = "Fail"
+
+if percentage >= 90:
+    rank = "1"
+elif percentage >= 75:
+    rank = "2"
+elif percentage >= 60:
+    rank = "3"
+else:
+    rank = "N/A"
+
+print("\n....... RESULT CARD .......")
+print("Name       :", name)
+print("Roll No    :", roll)
+print("Total      :", total, "/500")
+print("Percentage :", round(percentage, 2), "%")
+print("Grade      :", grade)
+print("Division   :", division)
+print("Rank       :", rank)
